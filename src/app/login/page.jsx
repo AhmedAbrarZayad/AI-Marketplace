@@ -116,7 +116,7 @@ export default function LoginPage() {
                 type="email"
                 autoComplete="email"
                 required
-                className="input input-bordered w-full focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all bg-white"
+                className="input input-bordered w-full focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all bg-white text-gray-900"
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -132,7 +132,7 @@ export default function LoginPage() {
                 type="password"
                 autoComplete="current-password"
                 required
-                className="input input-bordered w-full focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all bg-white"
+                className="input input-bordered w-full focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all bg-white text-gray-900"
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -180,7 +180,7 @@ export default function LoginPage() {
               onClick={handleGoogleSignIn}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="btn btn-outline w-full flex items-center justify-center gap-2 hover:bg-gray-50 transition-all border-2 h-12"
+              className="btn btn-outline w-full flex items-center justify-center gap-2 hover:bg-gray-50 transition-all border-2 h-12 text-gray-900"
             >
               <svg className="w-5 h-5" viewBox="0 0 24 24">
                 <path
