@@ -53,7 +53,7 @@ const CreatePrompts = () => {
                 createdAt: new Date().toISOString(),
             };
 
-            const response = await fetch('http://localhost:5000/api/prompts/add-prompt', {
+            const response = await fetch(`${API_BASE_URL}/api/prompts/add-prompt`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

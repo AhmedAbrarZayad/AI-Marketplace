@@ -5,6 +5,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Footer from '../../../components/Footer';
 import toast from 'react-hot-toast';
+import { API_BASE_URL } from '@/api/api';
 
 export default function PromptDetails() {
     const params = useParams();
@@ -20,7 +21,7 @@ export default function PromptDetails() {
 
     const fetchPromptDetails = async () => {
         try {
-            const response = await fetch(`http://localhost:5000/api/prompts/${params.id}`);
+            const response = await fetch(`${API_BASE_URL}/api/prompts/${params.id}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch prompt details');
             }

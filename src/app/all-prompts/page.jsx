@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Footer from '../../components/Footer';
 import toast from 'react-hot-toast';
+import { API_BASE_URL } from '@/api/api';
 
 const AllPrompts = () => {
     const [prompts, setPrompts] = useState([]);
@@ -17,7 +18,7 @@ const AllPrompts = () => {
 
     const fetchPrompts = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/prompts');
+            const response = await fetch(`${API_BASE_URL}/api/prompts`);
             if (!response.ok) {
                 throw new Error('Failed to fetch prompts');
             }
