@@ -5,7 +5,8 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Footer from '../../../components/Footer';
 import toast from 'react-hot-toast';
-import { API_BASE_URL } from '@/api/api';
+import { API_BASE_URL } from '../../../api/api';
+
 
 export default function PromptDetails() {
     const params = useParams();

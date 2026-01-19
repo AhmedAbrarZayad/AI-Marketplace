@@ -1,8 +1,7 @@
-import { API_BASE_URL } from '@/api/api.ts';
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import PromptCards from './PromptCards';
-
+import { API_BASE_URL } from '../api/api';
+import { PromptCards } from './PromptCards';
 
 async function fetchTrendingPrompts() {
     const response = await fetch(`${API_BASE_URL}/api/prompts/trending/top`);

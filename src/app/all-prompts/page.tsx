@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Footer from '../../components/Footer';
 import toast from 'react-hot-toast';
-import { API_BASE_URL } from '@/api/api';
+import { API_BASE_URL } from '../../api/api';
 
 const AllPrompts = () => {
     const [prompts, setPrompts] = useState([]);
