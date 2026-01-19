@@ -9,13 +9,13 @@ export const PromptCards: React.FC<PromptCards> = ({ prompt }) => {
     return (
         <div className="card bg-base-100 w-96 shadow-xl hover:shadow-2xl transition-shadow duration-300">
             <div className="card-body">
-                <h2 className="card-title text-2xl font-bold">{prompt.title}</h2>
+                <h2 className="card-title text-2xl font-bold text-gray-900">{prompt.title}</h2>
                 <p className="text-gray-600 line-clamp-3">{prompt.description}</p>
                 
                 <div className="flex gap-2 mt-2 flex-wrap">
-                    <span className="badge badge-primary">{prompt.category}</span>
-                    <span className="badge badge-secondary">{prompt.model}</span>
-                    <span className="badge badge-accent">{prompt.difficulty}</span>
+                    <span className="badge bg-blue-100 text-blue-800 border-blue-300 font-semibold">{prompt.category}</span>
+                    <span className="badge bg-purple-100 text-purple-800 border-purple-300 font-semibold">{prompt.model}</span>
+                    <span className="badge bg-green-100 text-green-800 border-green-300 font-semibold">{prompt.difficulty}</span>
                 </div>
                 
                 <div className="flex items-center justify-between mt-4">

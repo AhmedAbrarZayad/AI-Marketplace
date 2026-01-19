@@ -71,7 +71,7 @@ export default function PromptDetails() {
                     {/* Back Button */}
                     <Link 
                         href="/all-prompts"
-                        className="btn btn-ghost mb-6"
+                        className="btn btn-ghost mb-6 text-gray-900 hover:text-blue-600"
                     >
                         ← Back to All Prompts
                     </Link>
@@ -102,20 +102,20 @@ export default function PromptDetails() {
                             {/* Meta Information */}
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                                 <div className="stat bg-gray-50 rounded-lg">
-                                    <div className="stat-title">Price</div>
+                                    <div className="stat-title text-gray-600">Price</div>
                                     <div className="stat-value text-blue-600">
                                         ${prompt.price || '0.00'}
                                     </div>
                                 </div>
                                 <div className="stat bg-gray-50 rounded-lg">
-                                    <div className="stat-title">Category</div>
-                                    <div className="stat-value text-2xl">
+                                    <div className="stat-title text-gray-600">Category</div>
+                                    <div className="stat-value text-2xl text-gray-900">
                                         {prompt.category || 'General'}
                                     </div>
                                 </div>
                                 <div className="stat bg-gray-50 rounded-lg">
-                                    <div className="stat-title">Rating</div>
-                                    <div className="stat-value text-2xl">
+                                    <div className="stat-title text-gray-600">Rating</div>
+                                    <div className="stat-value text-2xl text-gray-900">
                                         {prompt.rating ? `${prompt.rating} / 5` : 'N/A'}
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@ export default function PromptDetails() {
                                         </h2>
                                         <button 
                                             onClick={handleCopyPrompt}
-                                            className="btn btn-outline btn-sm gap-2"
+                                            className="btn btn-outline btn-sm gap-2 text-gray-900 hover:text-blue-600"
                                         >
                                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -148,10 +148,10 @@ export default function PromptDetails() {
                             <div className="space-y-4">
                                 {prompt.tags && prompt.tags.length > 0 && (
                                     <div>
-                                        <h3 className="text-lg font-semibold mb-2">Tags</h3>
+                                        <h3 className="text-lg font-semibold mb-2 text-gray-900">Tags</h3>
                                         <div className="flex flex-wrap gap-2">
                                             {prompt.tags.map((tag, index) => (
-                                                <span key={index} className="badge badge-primary">
+                                                <span key={index} className="badge badge-primary text-white">
                                                     {tag}
                                                 </span>
                                             ))}
@@ -161,14 +161,14 @@ export default function PromptDetails() {
 
                                 {prompt.aiModel && (
                                     <div>
-                                        <h3 className="text-lg font-semibold mb-2">Compatible AI Models</h3>
+                                        <h3 className="text-lg font-semibold mb-2 text-gray-900">Compatible AI Models</h3>
                                         <p className="text-gray-600">{prompt.aiModel}</p>
                                     </div>
                                 )}
 
                                 {prompt.useCases && prompt.useCases.length > 0 && (
                                     <div>
-                                        <h3 className="text-lg font-semibold mb-2">Use Cases</h3>
+                                        <h3 className="text-lg font-semibold mb-2 text-gray-900">Use Cases</h3>
                                         <ul className="list-disc list-inside space-y-1 text-gray-600">
                                             {prompt.useCases.map((useCase, index) => (
                                                 <li key={index}>{useCase}</li>
@@ -180,10 +180,10 @@ export default function PromptDetails() {
 
                             {/* Action Buttons */}
                             <div className="mt-8 flex gap-4">
-                                <button className="btn btn-primary btn-lg flex-1">
+                                <button className="btn btn-primary btn-lg flex-1 text-white">
                                     Purchase Now - ${prompt.price || '0.00'}
                                 </button>
-                                <button className="btn btn-outline btn-lg">
+                                <button className="btn btn-outline btn-lg text-gray-900 hover:text-blue-600">
                                     Add to Favorites
                                 </button>
                             </div>

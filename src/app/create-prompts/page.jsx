@@ -122,7 +122,7 @@ const CreatePrompts = () => {
                             {/* Title */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text font-semibold">Title *</span>
+                                    <span className="label-text font-semibold text-gray-900">Title *</span>
                                 </label>
                                 <input
                                     type="text"
@@ -130,7 +130,7 @@ const CreatePrompts = () => {
                                     value={formData.title}
                                     onChange={handleChange}
                                     placeholder="Give your prompt a catchy title"
-                                    className="input input-bordered w-full"
+                                    className="input input-bordered w-full bg-white text-gray-900"
                                     required
                                 />
                             </div>
@@ -138,14 +138,14 @@ const CreatePrompts = () => {
                             {/* Description */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text font-semibold">Description *</span>
+                                    <span className="label-text font-semibold text-gray-900">Description *</span>
                                 </label>
                                 <textarea
                                     name="description"
                                     value={formData.description}
                                     onChange={handleChange}
                                     placeholder="Describe what your prompt does and what results it produces"
-                                    className="textarea textarea-bordered h-24 w-full"
+                                    className="textarea textarea-bordered h-24 w-full bg-white text-gray-900"
                                     required
                                 />
                             </div>
@@ -153,14 +153,14 @@ const CreatePrompts = () => {
                             {/* Prompt Content */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text font-semibold">Prompt Content *</span>
+                                    <span className="label-text font-semibold text-gray-900">Prompt Content *</span>
                                 </label>
                                 <textarea
                                     name="content"
                                     value={formData.content}
                                     onChange={handleChange}
                                     placeholder="Enter your complete prompt here..."
-                                    className="textarea textarea-bordered h-40 w-full font-mono"
+                                    className="textarea textarea-bordered h-40 w-full font-mono bg-white text-gray-900"
                                     required
                                 />
                                 <label className="label">
@@ -174,13 +174,13 @@ const CreatePrompts = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text font-semibold">Category</span>
+                                        <span className="label-text font-semibold text-gray-900">Category</span>
                                     </label>
                                     <select
                                         name="category"
                                         value={formData.category}
                                         onChange={handleChange}
-                                        className="select select-bordered w-full"
+                                        className="select select-bordered w-full bg-white text-gray-900"
                                     >
                                         <option value="">Select a category</option>
                                         {categories.map(cat => (
@@ -191,7 +191,7 @@ const CreatePrompts = () => {
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="label-text font-semibold">Price (USD)</span>
+                                        <span className="label-text font-semibold text-gray-900">Price (USD)</span>
                                     </label>
                                     <input
                                         type="number"
@@ -201,7 +201,7 @@ const CreatePrompts = () => {
                                         placeholder="9.99"
                                         step="0.01"
                                         min="0"
-                                        className="input input-bordered w-full"
+                                        className="input input-bordered w-full bg-white text-gray-900"
                                     />
                                 </div>
                             </div>
@@ -209,7 +209,7 @@ const CreatePrompts = () => {
                             {/* AI Model */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text font-semibold">Compatible AI Models</span>
+                                    <span className="label-text font-semibold text-gray-900">Compatible AI Models</span>
                                 </label>
                                 <input
                                     type="text"
@@ -217,14 +217,14 @@ const CreatePrompts = () => {
                                     value={formData.aiModel}
                                     onChange={handleChange}
                                     placeholder="e.g., ChatGPT, Claude, Gemini"
-                                    className="input input-bordered w-full"
+                                    className="input input-bordered w-full bg-white text-gray-900"
                                 />
                             </div>
 
                             {/* Tags */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text font-semibold">Tags</span>
+                                    <span className="label-text font-semibold text-gray-900">Tags</span>
                                 </label>
                                 <input
                                     type="text"
@@ -232,7 +232,7 @@ const CreatePrompts = () => {
                                     value={formData.tags}
                                     onChange={handleChange}
                                     placeholder="marketing, copywriting, social media (comma separated)"
-                                    className="input input-bordered w-full"
+                                    className="input input-bordered w-full bg-white text-gray-900"
                                 />
                                 <label className="label">
                                     <span className="label-text-alt text-gray-500">
@@ -245,7 +245,7 @@ const CreatePrompts = () => {
                             <div className="form-control mt-8">
                                 <button
                                     type="submit"
-                                    className="btn btn-primary btn-lg w-full"
+                                    className="btn btn-primary btn-lg w-full text-white"
                                     disabled={isSubmitting}
                                 >
                                     {isSubmitting ? (
